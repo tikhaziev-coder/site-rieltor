@@ -152,6 +152,12 @@ button svg,.button svg,.text-link svg {
   background:#a79a8d;
 }
 
+.reviews-section .reviews-label span,
+.mortgage-heading .eyebrow span,
+.contact-section .eyebrow span {
+  width:14px;
+}
+
 .eyebrow.light {
   color:#cfbfb1;
 }
@@ -628,19 +634,9 @@ button svg,.button svg,.text-link svg {
   align-items:center;
 }
 
-.about-copy .eyebrow {
-  margin-bottom:21px;
-  font-size:14px;
-  gap:15px;
-}
-
-.about-copy .eyebrow span {
-  width:28px;
-  flex-shrink:0;
-}
-
 .about-copy {
   min-width:0;
+  align-self:start;
 }
 
 .about-copy h2 {
