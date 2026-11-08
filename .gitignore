@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.*
+*.pem
+*.key
+*.log
+.clasp.json
+credentials*.json
+service-account*.json

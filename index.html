@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Структура персонального сайта специалиста по недвижимости.">
+  <meta name="theme-color" content="#29231f">
+  <title>Алсу — недвижимость с личным подходом</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=18">
+  <link rel="stylesheet" href="reviews.css?v=4">
+  <link rel="stylesheet" href="mortgage.css?v=7">
+  <script src="script.js?v=5" defer></script>
+  <script src="mortgage-config.js?v=2" defer></script>
+  <script src="mortgage-core.js?v=3" defer></script>
+  <script src="mortgage-analytics.js" defer></script>
+  <script src="mortgage-ui.js?v=3" defer></script>
+</head>
+<body>
+  <!-- Общие иконки. Не требуют библиотек или подключения к интернету. -->
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-logo" viewBox="0 0 64 54"><path d="M5 50V25L31 5l28 24v21M20 50V14m28 36V20M31 5v45"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h17m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 40 40"><path d="m20 4 13 6v11c0 8-13 15-13 15S7 29 7 21V10l13-6Z"/><path d="m13 19 5 5 9-10"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 40 40"><path d="M5 32V23h6v9H5Zm12 0V17h6v15h-6Zm12 0V9h6v23h-6ZM5 16 16 8l7 3L35 3m-8 0h8v8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 40 40"><path d="M20 34 6 20C-3 8 12-1 20 10c8-11 23-2 14 10L20 34Z"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 40 40"><path d="m5 14 7-9h16l7 9-15 22L5 14Zm0 0h30M12 5l8 31 8-31m-16 0 8 9 8-9"/></symbol>
+    <symbol id="i-key" viewBox="0 0 40 40"><circle cx="27" cy="12" r="9"/><path d="m21 19-16 16H2v-7l4-4h5v-5h5l5-5"/></symbol>
+    <symbol id="i-picture" viewBox="0 0 40 40"><rect x="5" y="5" width="30" height="30" rx="2"/><circle cx="15" cy="14" r="3"/><path d="m6 30 9-10 6 6 5-6 9 10"/></symbol>
+    <symbol id="i-building" viewBox="0 0 160 160"><path d="M22 145V49l47-24 47 24v96M69 25v120M116 71l25 13v61M12 145h138M37 56v12m17-20v12M37 82v12m17-20v12m-17 22v12m17-20v12m31-64v12m16-4v12M85 74v12m16-4v12m-16 6v12m16-4v12m27-23v12m0 12v12M51 145v-16h35v16"/></symbol>
+    <symbol id="i-house" viewBox="0 0 160 160"><path d="m12 79 69-55 67 55M27 68v77h107V68M15 145h133M49 48V26h18v8M42 94h27v28H42V94Zm50 51V94h25v51M81 24v121M22 78h119"/></symbol>
+    <symbol id="i-interior" viewBox="0 0 480 340"><path d="M5 5h470v330H5V5Zm0 0 80 60h310l80-60M85 65v208L5 335m390-270v208l80 62M85 273h310M298 65v165h97M346 65v165m-48-84h97M106 205h125v60H106v-60Zm-12 18h150v42H94v-42Zm13 42v12m124-12v12M132 205v18m69-18v18M272 251h74m-37 0v28m-26 0h52M150 65v34m-20 25 20-25 20 25h-40Zm206 145v-43m0 22c-28 0-29-21-29-21 22 0 29 21 29 21Zm0-9c27 0 28-21 28-21-21 0-28 21-28 21ZM83 305h315"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <!-- 01. Первый экран. Замените имя, позиционирование и фотографию. -->
+  <header class="header-shell" id="top">
+    <div class="site-header container">
+      <a class="brand" href="#top" aria-label="На главную">
+        <img class="brand-logo" src="assets/kashapova-estate-logo.png" width="1448" height="1086" alt="Kashapova & Estate" decoding="async">
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+        <a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#reviews">Отзывы</a><a href="#mortgage">Калькулятор</a><a href="#contacts">Контакты</a>
+      </nav>
+      <button class="button button-outline header-contact" type="button" data-contact aria-haspopup="dialog" aria-controls="contact-dialog">Связаться <svg><use href="#i-arrow"/></svg></button>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero-shell">
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Алсу</h1>
+          <p class="hero-subtitle">Ваш личный риэлтор <br><span>в вашем городе</span></p>
+          <button class="button button-primary" type="button" data-contact aria-haspopup="dialog" aria-controls="contact-dialog">Получить консультацию <svg><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="hero-visual">
+          <div class="portrait-frame portrait-frame--photo">
+            <img class="portrait-image" src="assets/portrait.jpg" width="1280" height="1920" alt="Портрет специалиста по недвижимости" fetchpriority="high" decoding="async">
+          </div>
+          <span class="hero-side-note">ДОМ НАЧИНАЕТСЯ С ВАС</span>
+          <span class="visual-orbit" aria-hidden="true"></span>
+        </div>
+      </section>
+
+  </div>
+
+      <!-- 02. Об эксперте: биография, подход и фотография. -->
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="eyebrow">Немного обо мне <span></span></p>
+            <h2 id="about-title">Я — специалист по <em>недвижимости</em></h2>
+            <div class="about-biography">
+              <p>Работаю на рынках Уфы, Сочи и Санкт-Петербурга. Сотрудничаю напрямую с ведущими застройщиками, хорошо знаю рынок новостроек, репутацию девелоперов и актуальные предложения.</p>
+              <p>Подбираю недвижимость под индивидуальный запрос клиента: от выгодных инвестиционных предложений до эксклюзивных объектов для жизни. Учитываю ваши цели, пожелания и бюджет.</p>
+              <p class="about-expertise">Регулярно выступаю экспертом для <strong>РБК</strong>, делюсь профессиональным мнением</p>
+            </div>
+          </div>
+          <figure class="about-image">
+            <img src="assets/about-portrait.png" width="1024" height="1536" alt="Специалист по недвижимости разговаривает по телефону" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </section>
+
+      <!-- 03. Услуги: место для фотографий и описание каждого направления. -->
+      <section class="section services-section" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <div><h2 id="services-title">Всё начинается <br>с <em>вашей задачи</em></h2></div>
+          </div>
+          <div class="services-grid">
+            <article class="service-item">
+              <div class="service-card service-city">
+                <img class="service-photo" src="assets/service-5668.jpg" width="1600" height="1392" alt="Гостиная с высокими окнами и мягкой мебелью" loading="lazy" decoding="async">
+                <h3 class="service-bottom">Покупка и продажа <br>недвижимости</h3>
+              </div>
+              <ul class="service-description">
+                <li>Подбор квартир, земельных участков и коммерческой недвижимости</li>
+                <li>Поиск покупателей и организация продажи</li>
+                <li>Анализ рыночной стоимости объектов</li>
+              </ul>
+            </article>
+            <article class="service-item">
+              <div class="service-card service-new">
+                <img class="service-photo" src="assets/service-5666.jpg" width="1600" height="1406" alt="Современные высотные здания" loading="lazy" decoding="async">
+                <h3 class="service-bottom">Подбор <br>новостроек</h3>
+              </div>
+              <ul class="service-description">
+                <li>Бесплатная консультация и подбор новостроек</li>
+                <li>Прямое сотрудничество с застройщиками</li>
+                <li>Доступ к актуальным акциям, скидкам и специальным предложениям</li>
+              </ul>
+            </article>
+            <article class="service-item">
+              <div class="service-card service-house">
+                <img class="service-photo" src="assets/service-5664.jpg" width="1600" height="1346" alt="Фасад жилого дома с балконами и озеленением" loading="lazy" decoding="async">
+                <h3 class="service-bottom">Ипотечное <br>сопровождение</h3>
+              </div>
+              <ul class="service-description">
+                <li>Подбор подходящей ипотечной программы</li>
+                <li>Помощь в подготовке документов</li>
+                <li>Сопровождение процесса одобрения ипотеки</li>
+              </ul>
+            </article>
+            <article class="service-item">
+              <div class="service-card service-key">
+                <img class="service-photo" src="assets/service-5663.jpg" width="1600" height="1471" alt="Интерьер лобби со стойкой ресепшена" loading="lazy" decoding="async">
+                <h3 class="service-bottom">Юридическое <br>сопровождение сделок</h3>
+              </div>
+              <ul class="service-description">
+                <li>Проверка документов и юридической чистоты объекта</li>
+                <li>Организация и контроль всех этапов сделки</li>
+                <li>Сопровождение до завершения сделки и получения ключей</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. Общий заголовок, место для фото с клиентами слева и отзывы справа. -->
+      <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
+        <div class="container reviews-layout">
+          <p class="eyebrow reviews-label">Отзывы <span></span></p>
+          <h2 class="reviews-title" id="reviews-title">Самое ценное — <em>ваше доверие</em></h2>
+          <div class="clients-card">
+            <div class="clients-photo">
+              <img src="assets/clients.jpg" alt="Алсу с клиентами" width="1152" height="2048" loading="lazy">
+            </div>
+          </div>
+          <div class="reviews-carousel" role="region" aria-roledescription="карусель" aria-label="Отзывы клиентов">
+            <ul class="reviews-track" id="reviews-track" tabindex="0" aria-label="Фотографии отзывов">
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-01.jpg" width="1178" height="735" alt="Отзыв клиента 1: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-02.jpg" width="1280" height="455" alt="Отзыв клиента 2: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-03.jpg" width="1280" height="295" alt="Отзыв клиента 3: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-04.png" width="1153" height="884" alt="Отзыв клиента 4: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-05.png" width="967" height="610" alt="Отзыв клиента 5: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-06.png" width="1290" height="525" alt="Отзыв клиента 6: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-07.png" width="1290" height="594" alt="Отзыв клиента 7: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+              <li class="review-slide">
+                <div class="review-card"><div class="review-image"><img src="assets/reviews/review-08.png" width="1263" height="1111" alt="Отзыв клиента 8: скриншот переписки" loading="lazy" decoding="async" draggable="false"></div></div>
+              </li>
+            </ul>
+          </div>
+          <div class="reviews-navigation" aria-label="Перелистывание отзывов">
+            <p class="reviews-count" id="reviews-count" aria-live="polite" aria-atomic="true">1 / 8</p>
+            <button class="review-arrow" id="reviews-prev" type="button" aria-label="Предыдущий отзыв" aria-controls="reviews-track" disabled><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="review-arrow" id="reviews-next" type="button" aria-label="Следующий отзыв" aria-controls="reviews-track"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. Ипотечный калькулятор. Аналитика настраивается в mortgage-config.js. -->
+      <section class="section mortgage-section" id="mortgage" aria-labelledby="mortgage-title">
+        <div class="container">
+          <div class="section-heading mortgage-heading">
+            <div><p class="eyebrow">Ипотечный калькулятор <span></span></p><h2 id="mortgage-title">Ваш дом. <em>Ваши условия</em></h2></div>
+          </div>
+          <noscript><p class="mortgage-error">Для расчёта включите JavaScript в браузере.</p></noscript>
+          <div class="mortgage-layout">
+            <form id="mortgage-form" class="mortgage-form" novalidate>
+              <div class="mortgage-fields">
+                <div class="mortgage-field">
+                  <label for="mortgage-price">Стоимость недвижимости</label>
+                  <div class="mortgage-input-wrap"><input id="mortgage-price" data-field="price" name="price" inputmode="decimal" type="text" value="5 000 000" autocomplete="off" required aria-describedby="mortgage-price-hint"><span class="input-unit">₽</span></div>
+                  <input class="mortgage-range" id="price-range" type="range" min="100000" max="30000000" step="100000" value="5000000" aria-label="Изменить стоимость недвижимости ползунком">
+                  <small id="mortgage-price-hint">Введите стоимость или передвиньте ползунок</small>
+                </div>
+                <div class="mortgage-field">
+                  <label for="mortgage-down">Первоначальный взнос</label>
+                  <div class="mortgage-input-wrap"><input id="mortgage-down" data-field="downPayment" name="downPayment" inputmode="decimal" type="text" value="20" autocomplete="off" required aria-describedby="down-equivalent"><div class="unit-switch" role="group" aria-label="Единицы первоначального взноса"><button type="button" data-down-unit="rub" aria-pressed="false">₽</button><button type="button" data-down-unit="percent" aria-pressed="true">%</button></div></div>
+                  <p class="field-equivalent" id="down-equivalent">1 000 000 ₽</p>
+                </div>
+                <div class="mortgage-field">
+                  <label for="mortgage-rate">Годовая ставка</label>
+                  <div class="mortgage-input-wrap"><input id="mortgage-rate" data-field="annualRate" name="annualRate" inputmode="decimal" type="text" value="12" autocomplete="off" required aria-describedby="rate-hint"><span class="input-unit">%</span></div>
+                  <small id="rate-hint">Укажите ставку банка. 12% — пример для расчёта.</small>
+                </div>
+                <div class="mortgage-field">
+                  <label for="mortgage-term">Срок кредита</label>
+                  <div class="mortgage-input-wrap"><input id="mortgage-term" data-field="term" name="term" inputmode="numeric" type="text" value="20" autocomplete="off" required><div class="unit-switch" role="group" aria-label="Единицы срока"><button type="button" data-term-unit="years" aria-pressed="true">лет</button><button type="button" data-term-unit="months" aria-pressed="false">мес.</button></div></div>
+                  <input class="mortgage-range" id="term-range" type="range" min="1" max="30" step="1" value="20" aria-label="Изменить срок кредита ползунком">
+                </div>
+              </div>
+              <details class="mortgage-options" id="mortgage-options">
+                <summary><span>Дата и досрочное погашение</span><span class="details-plus" aria-hidden="true">+</span></summary>
+                <div class="mortgage-options-content">
+                  <div class="mortgage-field date-field"><label for="mortgage-first-date">Первый платёж</label><input id="mortgage-first-date" data-field="firstPaymentDate" name="firstPaymentDate" type="date" required><small>Дата для календаря платежей</small></div>
+                  <div class="extra-heading"><p>Досрочные платежи</p><span>Необязательно</span></div>
+                  <div id="extra-payments"></div>
+                  <button class="add-extra" id="add-extra" type="button"><span aria-hidden="true">+</span> Добавить платёж</button>
+                  <div class="mortgage-field extra-mode" id="extra-mode-wrap" hidden><label for="extra-mode">За счёт досрочного погашения</label><select id="extra-mode" data-field="extraMode" name="extraMode"><option value="term">Сокращать срок кредита</option><option value="payment">Уменьшать ежемесячный платёж</option></select><small>Дополнительная сумма вносится после обычного платежа указанного месяца. Повторяющийся платёж — каждый месяц до погашения.</small></div>
+                </div>
+              </details>
+              <p id="mortgage-error" class="mortgage-error" role="alert" hidden></p>
+              <div class="mortgage-actions"><button class="button button-primary" type="submit">Рассчитать <svg aria-hidden="true"><use href="#i-arrow"/></svg></button><button class="mortgage-reset" type="reset">Сбросить</button></div>
+              <p class="mortgage-privacy" id="mortgage-privacy" hidden>Для статистики сохраняются параметры расчёта и идентификатор браузера, без имени и контактов.</p>
+            </form>
+
+            <aside class="mortgage-result" id="mortgage-result" aria-labelledby="result-title">
+              <div class="result-topline"><span>Ваш ориентир</span><span class="result-status" id="result-status">До расчёта</span></div>
+              <h3 id="result-title">Платёж в месяц</h3>
+              <p class="result-payment" id="result-payment">— <span>₽</span></p>
+              <p class="result-note" id="result-note">Укажите условия и нажмите «Рассчитать».</p>
+              <dl class="result-details">
+                <div><dt>Сумма кредита</dt><dd id="result-principal">—</dd></div>
+                <div><dt>Переплата по процентам</dt><dd id="result-interest">—</dd></div>
+                <div><dt>Всего выплат банку</dt><dd id="result-total">—</dd></div>
+                <div><dt>Последний платёж</dt><dd id="result-date">—</dd></div>
+              </dl>
+              <div class="cost-breakdown" id="cost-breakdown" hidden><div class="cost-bar" aria-hidden="true"><span id="cost-principal"></span></div><div class="cost-legend"><span><i></i> Кредит</span><span><i></i> Проценты</span></div></div>
+              <div class="result-savings" id="result-savings" hidden><span>Экономия с досрочными платежами</span><strong id="result-saved">—</strong><small id="result-time-saved"></small></div>
+            </aside>
+          </div>
+          <p class="mortgage-announcement" id="mortgage-announcement" role="status" aria-live="polite"></p>
+          <p class="mortgage-disclaimer">Предварительный расчёт при фиксированной ставке, без страховок и комиссий. Окончательные условия определяет банк.</p>
+          <details class="mortgage-schedule" id="mortgage-schedule" hidden>
+            <summary><span>График платежей <small id="schedule-count"></small></span><span class="details-plus" aria-hidden="true">+</span></summary>
+            <div class="schedule-content"><div class="schedule-tools"><p>В каждом месяце: платёж, проценты и остаток долга.</p><button class="text-link" id="schedule-download" type="button">Скачать CSV <svg aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+              <div class="schedule-scroll" role="region" aria-label="Помесячный график платежей, прокручивается горизонтально" tabindex="0"><table><caption class="visually-hidden">Расчёт погашения ипотечного кредита</caption><thead><tr><th scope="col">Дата</th><th scope="col">Платёж, ₽</th><th scope="col">Проценты, ₽</th><th scope="col">Основной долг, ₽</th><th scope="col">Досрочно, ₽</th><th scope="col">Остаток, ₽</th></tr></thead><tbody id="schedule-body"></tbody></table></div>
+            </div>
+          </details>
+          <details class="mortgage-method"><summary>Как устроен расчёт</summary><p>Используем аннуитет: равные ежемесячные платежи при неизменных условиях. Проценты за месяц — остаток долга × годовая ставка / 12. Каждый месяц считается равным периодом; дата первого платежа задаёт календарь, но не меняет начисление процентов. Досрочные платежи уменьшают долг после планового платежа. Суммы округляются до копеек, последний платёж закрывает остаток. В расчёт не входят страховки, комиссии и переносы на рабочие дни. «Всего выплат банку» не включает первоначальный взнос и не является показателем ПСК.</p></details>
+        </div>
+      </section>
+
+      <!-- 06. Контакты. Кнопка открывает выбор сервиса связи. -->
+      <section class="contact-section" id="contacts" aria-labelledby="contact-title">
+        <div class="container contact-grid"><div><p class="eyebrow light">Сделаем первый шаг <span></span></p><h2 id="contact-title">Давайте найдём <br><em>ваш идеальный дом</em></h2></div><div class="contact-action"><p>Всё начинается с разговора. <br>Расскажите, что вы ищете.</p><button class="button button-primary" type="button" data-contact aria-haspopup="dialog" aria-controls="contact-dialog">Обсудить вашу задачу <svg><use href="#i-arrow"/></svg></button></div><svg class="contact-art" aria-hidden="true"><use href="#i-building"/></svg></div>
+      </section>
+    </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand" href="#top" aria-label="Вернуться наверх"><img class="brand-logo" src="assets/kashapova-estate-logo.png" width="1448" height="1086" alt="Kashapova & Estate" decoding="async"></a>
+    </div>
+  </footer>
+
+  <!-- Общее окно выбора сервиса для трёх кнопок связи. -->
+  <dialog class="modal contact-dialog" id="contact-dialog" aria-labelledby="contact-dialog-title" aria-describedby="contact-dialog-description">
+    <button class="close-button" type="button" data-close aria-label="Закрыть выбор способа связи" autofocus><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <p class="eyebrow">На связи <span></span></p>
+    <h2 id="contact-dialog-title">Как вам <em>удобнее?</em></h2>
+    <p class="contact-dialog-description" id="contact-dialog-description">Выберите, где хотите написать</p>
+    <ul class="contact-services">
+      <li><a class="contact-service" href="https://t.me/kashapova_ar" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram — откроется в новой вкладке">
+        <span class="contact-service-icon contact-service-icon-telegram"><img src="assets/contact-icons/telegram.svg" alt="" width="26" height="26" aria-hidden="true"></span>
+        <span>Telegram</span><svg class="contact-service-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a></li>
+      <li><a class="contact-service" href="https://wa.me/79371623012?s=p" target="_blank" rel="noopener noreferrer" aria-label="Написать в WhatsApp — откроется в новой вкладке">
+        <span class="contact-service-icon contact-service-icon-whatsapp"><img src="assets/contact-icons/whatsapp.svg" alt="" width="26" height="26" aria-hidden="true"></span>
+        <span>WhatsApp</span><svg class="contact-service-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a></li>
+      <li><a class="contact-service" href="https://max.ru/u/f9LHodD0cOK5RoeXJf_FAuiPh96lJ9aKVaO37O-SDiMr0IAbaqhUxkjohjQ" target="_blank" rel="noopener noreferrer" aria-label="Написать в MAX — откроется в новой вкладке">
+        <span class="contact-service-icon contact-service-icon-max"><img src="assets/contact-icons/max.svg" alt="" width="26" height="26" aria-hidden="true"></span>
+        <span>MAX</span><svg class="contact-service-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a></li>
+      <li><a class="contact-service" href="https://www.instagram.com/alsu_radievna/" target="_blank" rel="noopener noreferrer" aria-label="Написать в Instagram — откроется в новой вкладке">
+        <span class="contact-service-icon contact-service-icon-instagram"><img src="assets/contact-icons/instagram.svg" alt="" width="26" height="26" aria-hidden="true"></span>
+        <span>Instagram</span><svg class="contact-service-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a></li>
+    </ul>
+  </dialog>
+
+</body>
+</html>
