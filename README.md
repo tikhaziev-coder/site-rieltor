@@ -2,7 +2,7 @@
 
 Персональный сайт с услугами, фотографиями клиентов, каруселью отзывов, выбором мессенджера и ипотечным калькулятором.
 
-**Сайт:** [tikhaziev-coder.github.io/site-rieltor](https://tikhaziev-coder.github.io/site-rieltor/)
+**Сайт:** [alsu-rieltor.ru](https://alsu-rieltor.ru/)
 
 ## Локальный запуск
 
@@ -37,6 +37,8 @@ node --test tests/mortgage.test.cjs
 ## Публикация
 
 GitHub Pages публикует корень ветки `main`. Файл `.nojekyll` отключает обработку Jekyll. После изменений отправьте коммит в `main` и дождитесь завершения развёртывания Pages.
+
+Файл `CNAME` закрепляет домен `alsu-rieltor.ru` за сайтом. Сохраняйте его при следующих публикациях. DNS обслуживается в REG.RU; `www` направляется на тот же сайт. HTTPS-сертификат выпускает GitHub Pages.
 
 ## Аналитика
 
